@@ -1,8 +1,9 @@
 # freenect_usal
+# 
 
 project:     graduate project API Kinect
 
-tutor:       Raúl Alves
+tutor:       Raúl Alves 
 me:          Gabriel Alzamora
 
 objective:
