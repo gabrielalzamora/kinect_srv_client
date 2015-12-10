@@ -1,14 +1,18 @@
 /*****************************************************************************
 
-File        : main.cpp
+File        : server.h
 
 Proyect     : API Kinect
 Copyright (c) 2015  Gabriel Alzamora
 
+based on the examples of the Qt Toolkit
+Copyright (c) 2015 The Qt Company Ltd
+http://www.qt.io/licensing/
+
 Author      : Gabriel Alzamora     <gabrielalzamora@usal.es>
 Tutor       : Raul Alves           <ralves@usal.es>
 Version     : 1.0
-Description : read Kinect & serve it to clients
+Description : read Kinect & show on QT gui
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,14 +29,40 @@ Description : read Kinect & serve it to clients
 
 *****************************************************************************/
 
-#include "mainwindow.h"
-#include <QApplication>
+#ifndef SERVER_H
+#define SERVER_H
 
-int main(int argc, char *argv[])
+#include <QTcpServer>
+#include <QTcpSocket>
+//#include <QPixmap>
+#include <QImage>
+
+class Server : public QTcpServer
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    Q_OBJECT
 
-    return a.exec();
-}
+public:
+    explicit Server(QObject *parent = 0);
+    ~Server();
+
+signals:
+//    void sendIp(QString ipAddress);
+    void sendMessage(QString msg);
+    void sendImageMain(QImage video);
+
+public slots:
+    void startKinect();
+    void stopKinect();
+    void socketConnect();
+    void readRequest();
+
+private:
+    void incomingConnection(int socketId);
+    QTcpServer *server;
+    QTcpSocket *socket;
+    quint32 size;
+    QImage image;
+
+};
+
+#endif // SERVER_H

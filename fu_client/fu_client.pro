@@ -1,25 +1,21 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2015-11-03T20:33:52
+# Project created by QtCreator 2015-11-09T18:33:20
 #
 #-------------------------------------------------
 
-QT      += core gui network
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET   = fu_server
+TARGET   = fu_client
 TEMPLATE = app
-
 
 SOURCES += main.cpp\
            mainwindow.cpp \
-           server.cpp
+           client.cpp
 
 HEADERS += mainwindow.h \
-           server.h \
-           freenect_usal.h
+           client.h
 
 FORMS   += mainwindow.ui
-
-LIBS    += -L"/usr/local/lib" -lfreenect
