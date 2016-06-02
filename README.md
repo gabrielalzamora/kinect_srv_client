@@ -6,6 +6,7 @@ project:
 
 tutor:
 		Raúl Alves 
+
 me:
 		Gabriel Alzamora
 
@@ -17,6 +18,8 @@ objective:
         Client will config server and obtain data
 
 state of art:
+2/jun/2016
+		improving kinect streams comprehension (see k_ver project)
 10/dec/2015
 		server read kinect video
 		client receive video
