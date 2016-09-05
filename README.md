@@ -1,5 +1,5 @@
 # freenect_usal
-# 
+
 QT server read kinect data and serve to client
 
 not politely finished
