@@ -2,7 +2,7 @@
 
 QT server read kinect data and serve to client
 
-not politely finished
+not politely finished hope to retake it ~nov2016
 
 state of art:
 2/jun/2016
