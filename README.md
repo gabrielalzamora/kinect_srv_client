@@ -1,6 +1,6 @@
-# freenect_usal
+# kinect_srv_client
 
-QT server read kinect data and serve to client
+very simple QT server read kinect data and serve to client
 
 not politely finished hope to retake it ~nov2016
 
