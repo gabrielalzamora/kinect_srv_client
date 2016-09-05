@@ -1,21 +1,8 @@
 # freenect_usal
 # 
+QT server read kinect data and serve to client
 
-project:
-		graduate project API Kinect
-
-tutor:
-		Raúl Alves 
-
-me:
-		Gabriel Alzamora
-
-objective:
-		API to easy use of kinect in gnuLinux
-
-        Server will obtain data from kinect
-
-        Client will config server and obtain data
+not politely finished
 
 state of art:
 2/jun/2016
